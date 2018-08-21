@@ -119,7 +119,7 @@ $(function() {
     feedList.on('click', 'a', function() {
         var item = $(this);
 
-        $('body').addClass('menu-hidden');
+        body.addClass('menu-hidden');
         loadFeed(item.data('id'));
         return false;
     });
@@ -128,6 +128,6 @@ $(function() {
      * on the body to perform the hiding/showing of our menu.
      */
     menuIcon.on('click', function() {
-        $('body').toggleClass('menu-hidden');
+        body.toggleClass('menu-hidden');
     });
 }());
