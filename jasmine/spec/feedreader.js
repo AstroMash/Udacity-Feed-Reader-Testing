@@ -30,7 +30,7 @@ $(function() {
          */
         it('should have valid URLs', () => {
             for(var i = 0; i < allFeeds.length; i++)
-            expect(allFeeds[i].url).toBeTruthy();
+            expect(allFeeds[i].url.length).toBeGreaterThan(0);
         });
         
         
@@ -42,7 +42,7 @@ $(function() {
          */
         it('should have valid names', () => {
             for(var i = 0; i < allFeeds.length; i++)
-            expect(allFeeds[i].name).toBeTruthy();
+            expect(allFeeds[i].name.length).toBeGreaterThan(0);
         });
     });
 
@@ -97,11 +97,8 @@ $(function() {
         });
 
         it('should be loaded', () => {
-            // Find the feed element on the page
-            feed = $('.feed')[0];
-            // Find the first entry element within the feed element
-            firstEntry = $('.feed').find('article.entry')[0];
-            expect(firstEntry).toBeDefined();
+            // Check if parent element '.feed' has child '.entry'
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
 
     });
