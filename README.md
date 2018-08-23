@@ -13,5 +13,5 @@
 
 ## Resources
 
-### Jasmine 2.1:
-* <https://jasmine.github.io/2.1/introduction.html>
+### Jasmine 3.2:
+* <https://jasmine.github.io/index.html>
